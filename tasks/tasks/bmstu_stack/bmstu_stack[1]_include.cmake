@@ -1,0 +1,5 @@
+if(EXISTS "/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/tasks/bmstu_stack/bmstu_stack[1]_tests.cmake")
+  include("/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/tasks/bmstu_stack/bmstu_stack[1]_tests.cmake")
+else()
+  add_test(bmstu_stack_NOT_BUILT bmstu_stack_NOT_BUILT)
+endif()

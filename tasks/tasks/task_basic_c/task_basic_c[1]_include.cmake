@@ -1,0 +1,5 @@
+if(EXISTS "/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/tasks/task_basic_c/task_basic_c[1]_tests.cmake")
+  include("/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/tasks/task_basic_c/task_basic_c[1]_tests.cmake")
+else()
+  add_test(task_basic_c_NOT_BUILT task_basic_c_NOT_BUILT)
+endif()

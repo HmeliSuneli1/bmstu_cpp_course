@@ -1,0 +1,5 @@
+if(EXISTS "/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/tasks/bmstu_simple_vector/bmstu_simple_vector[1]_tests.cmake")
+  include("/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/tasks/bmstu_simple_vector/bmstu_simple_vector[1]_tests.cmake")
+else()
+  add_test(bmstu_simple_vector_NOT_BUILT bmstu_simple_vector_NOT_BUILT)
+endif()
