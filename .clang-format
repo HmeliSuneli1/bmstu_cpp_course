@@ -1,8 +1,41 @@
-BasedOnStyle: Chromium
----
+BasedOnStyle: LLVM
 Language: Cpp
-UseTab: Always
-TabWidth: 4
+
+# Отступы
 IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+
+# Скобки
 BreakBeforeBraces: Allman
-Standard: c++20
+
+# Длина строки
+ColumnLimit: 100
+
+# Выравнивания
+AlignAfterOpenBracket: Align
+AlignOperands: true
+AlignTrailingComments: true
+
+# Переносы
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+
+# Пробелы
+SpaceBeforeParens: ControlStatements
+SpacesInAngles: false
+SpacesInContainerLiterals: false
+
+# Указатели
+PointerAlignment: Left
+
+# include
+SortIncludes: true
+
+# namespace
+NamespaceIndentation: All
+
+# Комментарии
+ReflowComments: true
+

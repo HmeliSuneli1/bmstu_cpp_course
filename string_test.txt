@@ -1,0 +1,1305 @@
+Test project /Users/dmitriikononov/Projects/bmstu_cpp_course/build
+      Start 11: StringTest.DefaultConstructor
+ 1/81 Test #11: StringTest.DefaultConstructor ......................   Passed    0.00 sec
+      Start 12: StringTest.DefaultConstructorW
+ 2/81 Test #12: StringTest.DefaultConstructorW .....................   Passed    0.00 sec
+      Start 13: StringTest.InitializerListConstructorW
+ 3/81 Test #13: StringTest.InitializerListConstructorW .............   Passed    0.00 sec
+      Start 14: StringTest.InitializerListConstructor
+ 4/81 Test #14: StringTest.InitializerListConstructor ..............   Passed    0.00 sec
+      Start 15: StringTest.InitializerListConstructorNonEmpty
+ 5/81 Test #15: StringTest.InitializerListConstructorNonEmpty ......   Passed    0.00 sec
+      Start 16: StringTest.ConstructorSizeW
+ 6/81 Test #16: StringTest.ConstructorSizeW ........................   Passed    0.00 sec
+      Start 17: StringTest.ConstructorSize
+ 7/81 Test #17: StringTest.ConstructorSize .........................   Passed    0.00 sec
+      Start 18: StringTest.ConstructorSizeOne
+ 8/81 Test #18: StringTest.ConstructorSizeOne ......................   Passed    0.00 sec
+      Start 19: StringTest.FromCStr
+ 9/81 Test #19: StringTest.FromCStr ................................   Passed    0.00 sec
+      Start 20: StringTest.FromWCStr
+10/81 Test #20: StringTest.FromWCStr ...............................   Passed    0.00 sec
+      Start 21: StringTest.FromWCStrSymbol
+11/81 Test #21: StringTest.FromWCStrSymbol .........................   Passed    0.00 sec
+      Start 22: StringTest.USymbolsW
+12/81 Test #22: StringTest.USymbolsW ...............................   Passed    0.00 sec
+      Start 23: StringTest.USymbol
+13/81 Test #23: StringTest.USymbol .................................   Passed    0.00 sec
+      Start 24: StringTest.USymbols
+14/81 Test #24: StringTest.USymbols ................................   Passed    0.00 sec
+      Start 25: StringTest.Empty
+15/81 Test #25: StringTest.Empty ...................................   Passed    0.00 sec
+      Start 26: StringTest.EmptyW
+16/81 Test #26: StringTest.EmptyW ..................................   Passed    0.00 sec
+      Start 27: StringTest.CopyAssignW
+17/81 Test #27: StringTest.CopyAssignW .............................   Passed    0.00 sec
+      Start 28: StringTest.CopyConstructor
+18/81 Test #28: StringTest.CopyConstructor .........................   Passed    0.00 sec
+      Start 29: StringTest.CopyAssignConstructor
+19/81 Test #29: StringTest.CopyAssignConstructor ...................   Passed    0.00 sec
+      Start 30: StringTest.MoveAssignConstructor
+20/81 Test #30: StringTest.MoveAssignConstructor ...................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = StringTest.MoveAssignConstructor
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from StringTest
+[ RUN      ] StringTest.MoveAssignConstructor
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_simple_string/simple_cstr_test.cpp:156: Failure
+Expected equality of these values:
+  str.c_str()
+    Which is: NULL
+  ""
+
+[  FAILED  ] StringTest.MoveAssignConstructor (0 ms)
+[----------] 1 test from StringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] StringTest.MoveAssignConstructor
+
+ 1 FAILED TEST
+
+      Start 31: StringTest.MoveAssignConstructor2
+21/81 Test #31: StringTest.MoveAssignConstructor2 ..................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = StringTest.MoveAssignConstructor2
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from StringTest
+[ RUN      ] StringTest.MoveAssignConstructor2
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_simple_string/simple_cstr_test.cpp:168: Failure
+Expected equality of these values:
+  str.c_str()
+    Which is: NULL
+  ""
+
+[  FAILED  ] StringTest.MoveAssignConstructor2 (0 ms)
+[----------] 1 test from StringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] StringTest.MoveAssignConstructor2
+
+ 1 FAILED TEST
+
+      Start 32: StringTest.CopyAssignConstructor2
+22/81 Test #32: StringTest.CopyAssignConstructor2 ..................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = StringTest.CopyAssignConstructor2
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from StringTest
+[ RUN      ] StringTest.CopyAssignConstructor2
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_simple_string/simple_cstr_test.cpp:180: Failure
+Expected equality of these values:
+  str.c_str()
+    Which is: NULL
+  ""
+
+[  FAILED  ] StringTest.CopyAssignConstructor2 (0 ms)
+[----------] 1 test from StringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] StringTest.CopyAssignConstructor2
+
+ 1 FAILED TEST
+
+      Start 33: StringTest.MoveAssignConstructorW
+23/81 Test #33: StringTest.MoveAssignConstructorW ..................   Passed    0.00 sec
+      Start 34: StringTest.CStrCopyAssign
+24/81 Test #34: StringTest.CStrCopyAssign ..........................   Passed    0.00 sec
+      Start 35: StringTest.CStrCopyAssignW
+25/81 Test #35: StringTest.CStrCopyAssignW .........................   Passed    0.00 sec
+      Start 36: StringTest.AssignCStr
+26/81 Test #36: StringTest.AssignCStr ..............................   Passed    0.00 sec
+      Start 37: StringTest.ConcatOpW
+27/81 Test #37: StringTest.ConcatOpW ...............................   Passed    0.00 sec
+      Start 38: StringTest.ConcatOp
+28/81 Test #38: StringTest.ConcatOp ................................   Passed    0.00 sec
+      Start 39: StringTest.OStream
+29/81 Test #39: StringTest.OStream .................................   Passed    0.00 sec
+      Start 40: StringTest.OStreamW
+30/81 Test #40: StringTest.OStreamW ................................   Passed    0.00 sec
+      Start 41: StringTest.IStream
+31/81 Test #41: StringTest.IStream .................................   Passed    0.00 sec
+      Start 42: StringTest.IStreamW
+32/81 Test #42: StringTest.IStreamW ................................   Passed    0.00 sec
+      Start 43: StringTest.IStreamWNewLine
+33/81 Test #43: StringTest.IStreamWNewLine .........................   Passed    0.00 sec
+      Start 44: StringTest.ConcatSymbol
+34/81 Test #44: StringTest.ConcatSymbol ............................   Passed    0.00 sec
+      Start 45: StringTest.Item
+35/81 Test #45: StringTest.Item ....................................   Passed    0.00 sec
+      Start 46: SSOStringTest.DefaultConstructor
+36/81 Test #46: SSOStringTest.DefaultConstructor ...................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.DefaultConstructor
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.DefaultConstructor
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:9: Failure
+Expected equality of these values:
+  str.c_str()
+    Which is: NULL
+  ""
+
+[  FAILED  ] SSOStringTest.DefaultConstructor (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.DefaultConstructor
+
+ 1 FAILED TEST
+
+      Start 47: SSOStringTest.DefaultConstructorW
+37/81 Test #47: SSOStringTest.DefaultConstructorW ..................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.DefaultConstructorW
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.DefaultConstructorW
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:16: Failure
+Expected equality of these values:
+  str.c_str()
+    Which is: NULL
+  L""
+
+[  FAILED  ] SSOStringTest.DefaultConstructorW (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.DefaultConstructorW
+
+ 1 FAILED TEST
+
+      Start 48: SSOStringTest.InitializerListConstructorW
+38/81 Test #48: SSOStringTest.InitializerListConstructorW ..........***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.InitializerListConstructorW
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.InitializerListConstructorW
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:23: Failure
+Expected equality of these values:
+  str.c_str()
+    Which is: NULL
+  L""
+
+[  FAILED  ] SSOStringTest.InitializerListConstructorW (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.InitializerListConstructorW
+
+ 1 FAILED TEST
+
+      Start 49: SSOStringTest.InitializerListConstructor
+39/81 Test #49: SSOStringTest.InitializerListConstructor ...........***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.InitializerListConstructor
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.InitializerListConstructor
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:30: Failure
+Expected equality of these values:
+  str.c_str()
+    Which is: NULL
+  L""
+
+[  FAILED  ] SSOStringTest.InitializerListConstructor (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.InitializerListConstructor
+
+ 1 FAILED TEST
+
+      Start 50: SSOStringTest.InitializerListConstructorNonEmpty
+40/81 Test #50: SSOStringTest.InitializerListConstructorNonEmpty ...***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.InitializerListConstructorNonEmpty
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.InitializerListConstructorNonEmpty
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:37: Failure
+Expected equality of these values:
+  str.c_str()
+    Which is: NULL
+  L"HELLO"
+
+[  FAILED  ] SSOStringTest.InitializerListConstructorNonEmpty (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.InitializerListConstructorNonEmpty
+
+ 1 FAILED TEST
+
+      Start 51: SSOStringTest.ConstructorSizeW
+41/81 Test #51: SSOStringTest.ConstructorSizeW .....................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.ConstructorSizeW
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.ConstructorSizeW
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:44: Failure
+Expected equality of these values:
+  str.c_str()
+    Which is: NULL
+  L"          "
+
+[  FAILED  ] SSOStringTest.ConstructorSizeW (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.ConstructorSizeW
+
+ 1 FAILED TEST
+
+      Start 52: SSOStringTest.ConstructorSize
+42/81 Test #52: SSOStringTest.ConstructorSize ......................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.ConstructorSize
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.ConstructorSize
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:51: Failure
+Expected equality of these values:
+  str.c_str()
+    Which is: NULL
+  "          "
+
+[  FAILED  ] SSOStringTest.ConstructorSize (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.ConstructorSize
+
+ 1 FAILED TEST
+
+      Start 53: SSOStringTest.ConstructorSizeOne
+43/81 Test #53: SSOStringTest.ConstructorSizeOne ...................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.ConstructorSizeOne
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.ConstructorSizeOne
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:58: Failure
+Expected equality of these values:
+  str.c_str()
+    Which is: NULL
+  L" "
+
+[  FAILED  ] SSOStringTest.ConstructorSizeOne (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.ConstructorSizeOne
+
+ 1 FAILED TEST
+
+      Start 54: SSOStringTest.FromCStr
+44/81 Test #54: SSOStringTest.FromCStr .............................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.FromCStr
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.FromCStr
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:65: Failure
+Expected equality of these values:
+  str.c_str()
+    Which is: NULL
+  "str\n"
+
+[  FAILED  ] SSOStringTest.FromCStr (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.FromCStr
+
+ 1 FAILED TEST
+
+      Start 55: SSOStringTest.FromWCStr
+45/81 Test #55: SSOStringTest.FromWCStr ............................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.FromWCStr
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.FromWCStr
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:72: Failure
+Expected equality of these values:
+  str.c_str()
+    Which is: NULL
+  L"test"
+
+[  FAILED  ] SSOStringTest.FromWCStr (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.FromWCStr
+
+ 1 FAILED TEST
+
+      Start 56: SSOStringTest.FromWCStrSymbol
+46/81 Test #56: SSOStringTest.FromWCStrSymbol ......................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.FromWCStrSymbol
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.FromWCStrSymbol
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:79: Failure
+Expected equality of these values:
+  str.c_str()
+    Which is: NULL
+  L"test"
+
+[  FAILED  ] SSOStringTest.FromWCStrSymbol (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.FromWCStrSymbol
+
+ 1 FAILED TEST
+
+      Start 57: SSOStringTest.USymbolsW
+47/81 Test #57: SSOStringTest.USymbolsW ............................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.USymbolsW
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.USymbolsW
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:87: Failure
+Expected equality of these values:
+  str.c_str()
+    Which is: NULL
+  L"a"
+
+[  FAILED  ] SSOStringTest.USymbolsW (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.USymbolsW
+
+ 1 FAILED TEST
+
+      Start 58: SSOStringTest.USymbol
+48/81 Test #58: SSOStringTest.USymbol ..............................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.USymbol
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.USymbol
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:95: Failure
+Expected equality of these values:
+  str.c_str()
+    Which is: NULL
+  "お"
+    Which is: "\xE3\x81\x8A"
+    As Text: "お"
+
+[  FAILED  ] SSOStringTest.USymbol (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.USymbol
+
+ 1 FAILED TEST
+
+      Start 59: SSOStringTest.USymbols
+49/81 Test #59: SSOStringTest.USymbols .............................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.USymbols
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.USymbols
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:102: Failure
+Expected equality of these values:
+  str.c_str()
+    Which is: NULL
+  "おはよう"
+    Which is: "\xE3\x81\x8A\xE3\x81\xAF\xE3\x82\x88\xE3\x81\x86"
+    As Text: "おはよう"
+
+[  FAILED  ] SSOStringTest.USymbols (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.USymbols
+
+ 1 FAILED TEST
+
+      Start 60: SSOStringTest.Empty
+50/81 Test #60: SSOStringTest.Empty ................................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.Empty
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.Empty
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:110: Failure
+Expected equality of these values:
+  empty.c_str()
+    Which is: NULL
+  ""
+
+[  FAILED  ] SSOStringTest.Empty (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.Empty
+
+ 1 FAILED TEST
+
+      Start 61: SSOStringTest.EmptyW
+51/81 Test #61: SSOStringTest.EmptyW ...............................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.EmptyW
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.EmptyW
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:117: Failure
+Expected equality of these values:
+  empty.c_str()
+    Which is: NULL
+  L""
+
+[  FAILED  ] SSOStringTest.EmptyW (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.EmptyW
+
+ 1 FAILED TEST
+
+      Start 62: SSOStringTest.CopyAssignW
+52/81 Test #62: SSOStringTest.CopyAssignW ..........................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.CopyAssignW
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.CopyAssignW
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:124: Failure
+Expected equality of these values:
+  nonempty.c_str()
+    Which is: NULL
+  L"Non Empty string"
+
+[  FAILED  ] SSOStringTest.CopyAssignW (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.CopyAssignW
+
+ 1 FAILED TEST
+
+      Start 63: SSOStringTest.CopyConstructor
+53/81 Test #63: SSOStringTest.CopyConstructor ......................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.CopyConstructor
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.CopyConstructor
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:132: Failure
+Expected equality of these values:
+  nonempty.c_str()
+    Which is: NULL
+  "Non Empty string"
+
+[  FAILED  ] SSOStringTest.CopyConstructor (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.CopyConstructor
+
+ 1 FAILED TEST
+
+      Start 64: SSOStringTest.CopyAssignConstructor
+54/81 Test #64: SSOStringTest.CopyAssignConstructor ................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.CopyAssignConstructor
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.CopyAssignConstructor
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:141: Failure
+Expected equality of these values:
+  nonempty->c_str()
+    Which is: NULL
+  "str"
+
+[  FAILED  ] SSOStringTest.CopyAssignConstructor (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.CopyAssignConstructor
+
+ 1 FAILED TEST
+
+      Start 65: SSOStringTest.MoveAssignConstructor
+55/81 Test #65: SSOStringTest.MoveAssignConstructor ................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.MoveAssignConstructor
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.MoveAssignConstructor
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:152: Failure
+Expected equality of these values:
+  str2.c_str()
+    Which is: NULL
+  "str"
+
+[  FAILED  ] SSOStringTest.MoveAssignConstructor (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.MoveAssignConstructor
+
+ 1 FAILED TEST
+
+      Start 66: SSOStringTest.MoveAssignConstructor2
+56/81 Test #66: SSOStringTest.MoveAssignConstructor2 ...............***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.MoveAssignConstructor2
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.MoveAssignConstructor2
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:164: Failure
+Expected equality of these values:
+  str2.c_str()
+    Which is: NULL
+  "str"
+
+[  FAILED  ] SSOStringTest.MoveAssignConstructor2 (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.MoveAssignConstructor2
+
+ 1 FAILED TEST
+
+      Start 67: SSOStringTest.CopyAssignConstructor2
+57/81 Test #67: SSOStringTest.CopyAssignConstructor2 ...............***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.CopyAssignConstructor2
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.CopyAssignConstructor2
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:176: Failure
+Expected equality of these values:
+  str2.c_str()
+    Which is: NULL
+  "str"
+
+[  FAILED  ] SSOStringTest.CopyAssignConstructor2 (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.CopyAssignConstructor2
+
+ 1 FAILED TEST
+
+      Start 68: SSOStringTest.MoveAssignConstructorW
+58/81 Test #68: SSOStringTest.MoveAssignConstructorW ...............***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.MoveAssignConstructorW
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.MoveAssignConstructorW
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:186: Failure
+Expected equality of these values:
+  str2.c_str()
+    Which is: NULL
+  L"other"
+
+[  FAILED  ] SSOStringTest.MoveAssignConstructorW (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.MoveAssignConstructorW
+
+ 1 FAILED TEST
+
+      Start 69: SSOStringTest.CStrCopyAssign
+59/81 Test #69: SSOStringTest.CStrCopyAssign .......................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.CStrCopyAssign
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.CStrCopyAssign
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:195: Failure
+Expected equality of these values:
+  b_str.c_str()
+    Which is: NULL
+  str
+    Which is: "Simple Str"
+
+[  FAILED  ] SSOStringTest.CStrCopyAssign (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.CStrCopyAssign
+
+ 1 FAILED TEST
+
+      Start 70: SSOStringTest.CStrCopyAssignW
+60/81 Test #70: SSOStringTest.CStrCopyAssignW ......................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.CStrCopyAssignW
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.CStrCopyAssignW
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:203: Failure
+Expected equality of these values:
+  b_str.c_str()
+    Which is: NULL
+  str
+    Which is: L"Simple string"
+
+[  FAILED  ] SSOStringTest.CStrCopyAssignW (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.CStrCopyAssignW
+
+ 1 FAILED TEST
+
+      Start 71: SSOStringTest.AssignCStr
+61/81 Test #71: SSOStringTest.AssignCStr ...........................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.AssignCStr
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.AssignCStr
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:209: Failure
+Expected equality of these values:
+  str.c_str()
+    Which is: NULL
+  L"123456789"
+
+[  FAILED  ] SSOStringTest.AssignCStr (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.AssignCStr
+
+ 1 FAILED TEST
+
+      Start 72: SSOStringTest.ConcatOpW
+62/81 Test #72: SSOStringTest.ConcatOpW ............................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.ConcatOpW
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.ConcatOpW
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:217: Failure
+Expected equality of these values:
+  c_str.c_str()
+    Which is: NULL
+  L"right_left"
+
+[  FAILED  ] SSOStringTest.ConcatOpW (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.ConcatOpW
+
+ 1 FAILED TEST
+
+      Start 73: SSOStringTest.ConcatOp
+63/81 Test #73: SSOStringTest.ConcatOp .............................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.ConcatOp
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.ConcatOp
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:225: Failure
+Expected equality of these values:
+  c_str.c_str()
+    Which is: NULL
+  "right_left"
+
+[  FAILED  ] SSOStringTest.ConcatOp (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.ConcatOp
+
+ 1 FAILED TEST
+
+      Start 74: SSOStringTest.OStream
+64/81 Test #74: SSOStringTest.OStream ..............................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.OStream
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.OStream
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:233: Failure
+Expected equality of these values:
+  ss.str().c_str()
+    Which is: ""
+  "String value"
+
+[  FAILED  ] SSOStringTest.OStream (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.OStream
+
+ 1 FAILED TEST
+
+      Start 75: SSOStringTest.OStreamW
+65/81 Test #75: SSOStringTest.OStreamW .............................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.OStreamW
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.OStreamW
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:241: Failure
+Expected equality of these values:
+  ss.str().c_str()
+    Which is: L""
+  L"String value"
+
+[  FAILED  ] SSOStringTest.OStreamW (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.OStreamW
+
+ 1 FAILED TEST
+
+      Start 76: SSOStringTest.IStream
+66/81 Test #76: SSOStringTest.IStream ..............................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.IStream
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.IStream
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:251: Failure
+Expected equality of these values:
+  a_str.c_str()
+    Which is: NULL
+  "Value of\nstring"
+With diff:
+@@ -1,1 +1,2 @@
+-NULL
++Value of
++string
+
+
+[  FAILED  ] SSOStringTest.IStream (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.IStream
+
+ 1 FAILED TEST
+
+      Start 77: SSOStringTest.IStreamW
+67/81 Test #77: SSOStringTest.IStreamW .............................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.IStreamW
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.IStreamW
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:260: Failure
+Expected equality of these values:
+  a_str.c_str()
+    Which is: NULL
+  L"Value of\nstring"
+With diff:
+@@ -1,1 +1,2 @@
+-NULL
++L"Value of
++string"
+
+
+[  FAILED  ] SSOStringTest.IStreamW (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.IStreamW
+
+ 1 FAILED TEST
+
+      Start 78: SSOStringTest.IStreamWNewLine
+68/81 Test #78: SSOStringTest.IStreamWNewLine ......................   Passed    0.00 sec
+      Start 79: SSOStringTest.ConcatSymbol
+69/81 Test #79: SSOStringTest.ConcatSymbol .........................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.ConcatSymbol
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.ConcatSymbol
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:276: Failure
+Expected equality of these values:
+  a_str.c_str()
+    Which is: NULL
+  L"S"
+
+[  FAILED  ] SSOStringTest.ConcatSymbol (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.ConcatSymbol
+
+ 1 FAILED TEST
+
+      Start 80: SSOStringTest.Item
+70/81 Test #80: SSOStringTest.Item .................................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.Item
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.Item
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:287: Failure
+Expected equality of these values:
+  a_str[0]
+    Which is: L'\0'
+  L'T'
+    Which is: L'T' (84, 0x54)
+
+[  FAILED  ] SSOStringTest.Item (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.Item
+
+ 1 FAILED TEST
+
+      Start 81: SSOStringTest.SSOShortString
+71/81 Test #81: SSOStringTest.SSOShortString .......................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.SSOShortString
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.SSOShortString
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:295: Failure
+Value of: short_str.is_using_sso()
+  Actual: false
+Expected: true
+
+[  FAILED  ] SSOStringTest.SSOShortString (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.SSOShortString
+
+ 1 FAILED TEST
+
+      Start 82: SSOStringTest.SSOEmptyString
+72/81 Test #82: SSOStringTest.SSOEmptyString .......................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.SSOEmptyString
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.SSOEmptyString
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:302: Failure
+Value of: empty_str.is_using_sso()
+  Actual: false
+Expected: true
+
+[  FAILED  ] SSOStringTest.SSOEmptyString (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.SSOEmptyString
+
+ 1 FAILED TEST
+
+      Start 83: SSOStringTest.SSOLongString
+73/81 Test #83: SSOStringTest.SSOLongString ........................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.SSOLongString
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.SSOLongString
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:311: Failure
+Expected: (long_str.size()) > (23), actual: 0 vs 23
+
+[  FAILED  ] SSOStringTest.SSOLongString (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.SSOLongString
+
+ 1 FAILED TEST
+
+      Start 84: SSOStringTest.SSOBoundaryString
+74/81 Test #84: SSOStringTest.SSOBoundaryString ....................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.SSOBoundaryString
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.SSOBoundaryString
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:317: Failure
+Value of: boundary_str.is_using_sso()
+  Actual: false
+Expected: true
+
+[  FAILED  ] SSOStringTest.SSOBoundaryString (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.SSOBoundaryString
+
+ 1 FAILED TEST
+
+      Start 85: SSOStringTest.SSOBeyondBoundary
+75/81 Test #85: SSOStringTest.SSOBeyondBoundary ....................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.SSOBeyondBoundary
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.SSOBeyondBoundary
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:325: Failure
+Expected equality of these values:
+  beyond_str.size()
+    Which is: 0
+  24
+
+[  FAILED  ] SSOStringTest.SSOBeyondBoundary (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.SSOBeyondBoundary
+
+ 1 FAILED TEST
+
+      Start 86: SSOStringTest.SSOTransitionOnConcat
+76/81 Test #86: SSOStringTest.SSOTransitionOnConcat ................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.SSOTransitionOnConcat
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.SSOTransitionOnConcat
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:331: Failure
+Value of: str1.is_using_sso()
+  Actual: false
+Expected: true
+
+[  FAILED  ] SSOStringTest.SSOTransitionOnConcat (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.SSOTransitionOnConcat
+
+ 1 FAILED TEST
+
+      Start 87: SSOStringTest.SSOWideShortString
+77/81 Test #87: SSOStringTest.SSOWideShortString ...................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.SSOWideShortString
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.SSOWideShortString
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:340: Failure
+Value of: short_wstr.is_using_sso()
+  Actual: false
+Expected: true
+
+[  FAILED  ] SSOStringTest.SSOWideShortString (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.SSOWideShortString
+
+ 1 FAILED TEST
+
+      Start 88: SSOStringTest.SSOWideLongString
+78/81 Test #88: SSOStringTest.SSOWideLongString ....................   Passed    0.00 sec
+      Start 89: SSOStringTest.SSOAfterMove
+79/81 Test #89: SSOStringTest.SSOAfterMove .........................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.SSOAfterMove
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.SSOAfterMove
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:352: Failure
+Value of: src.is_using_sso()
+  Actual: false
+Expected: true
+
+[  FAILED  ] SSOStringTest.SSOAfterMove (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.SSOAfterMove
+
+ 1 FAILED TEST
+
+      Start 90: SSOStringTest.SSOAfterCopy
+80/81 Test #90: SSOStringTest.SSOAfterCopy .........................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.SSOAfterCopy
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.SSOAfterCopy
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:362: Failure
+Value of: src.is_using_sso()
+  Actual: false
+Expected: true
+
+[  FAILED  ] SSOStringTest.SSOAfterCopy (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.SSOAfterCopy
+
+ 1 FAILED TEST
+
+      Start 91: SSOStringTest.SSOCapacity
+81/81 Test #91: SSOStringTest.SSOCapacity ..........................***Failed    0.00 sec
+Running main() from /Users/dmitriikononov/Projects/bmstu_cpp_course/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SSOStringTest.SSOCapacity
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SSOStringTest
+[ RUN      ] SSOStringTest.SSOCapacity
+/Users/dmitriikononov/Projects/bmstu_cpp_course/tasks/bmstu_string/task_sso_string/sso_string_test.cpp:372: Failure
+Value of: short_str.is_using_sso()
+  Actual: false
+Expected: true
+
+[  FAILED  ] SSOStringTest.SSOCapacity (0 ms)
+[----------] 1 test from SSOStringTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] SSOStringTest.SSOCapacity
+
+ 1 FAILED TEST
+
+
+42% tests passed, 47 tests failed out of 81
+
+Total Test time (real) =   0.24 sec
+
+The following tests FAILED:
+	 30 - StringTest.MoveAssignConstructor (Failed)
+	 31 - StringTest.MoveAssignConstructor2 (Failed)
+	 32 - StringTest.CopyAssignConstructor2 (Failed)
+	 46 - SSOStringTest.DefaultConstructor (Failed)
+	 47 - SSOStringTest.DefaultConstructorW (Failed)
+	 48 - SSOStringTest.InitializerListConstructorW (Failed)
+	 49 - SSOStringTest.InitializerListConstructor (Failed)
+	 50 - SSOStringTest.InitializerListConstructorNonEmpty (Failed)
+	 51 - SSOStringTest.ConstructorSizeW (Failed)
+	 52 - SSOStringTest.ConstructorSize (Failed)
+	 53 - SSOStringTest.ConstructorSizeOne (Failed)
+	 54 - SSOStringTest.FromCStr (Failed)
+	 55 - SSOStringTest.FromWCStr (Failed)
+	 56 - SSOStringTest.FromWCStrSymbol (Failed)
+	 57 - SSOStringTest.USymbolsW (Failed)
+	 58 - SSOStringTest.USymbol (Failed)
+	 59 - SSOStringTest.USymbols (Failed)
+	 60 - SSOStringTest.Empty (Failed)
+	 61 - SSOStringTest.EmptyW (Failed)
+	 62 - SSOStringTest.CopyAssignW (Failed)
+	 63 - SSOStringTest.CopyConstructor (Failed)
+	 64 - SSOStringTest.CopyAssignConstructor (Failed)
+	 65 - SSOStringTest.MoveAssignConstructor (Failed)
+	 66 - SSOStringTest.MoveAssignConstructor2 (Failed)
+	 67 - SSOStringTest.CopyAssignConstructor2 (Failed)
+	 68 - SSOStringTest.MoveAssignConstructorW (Failed)
+	 69 - SSOStringTest.CStrCopyAssign (Failed)
+	 70 - SSOStringTest.CStrCopyAssignW (Failed)
+	 71 - SSOStringTest.AssignCStr (Failed)
+	 72 - SSOStringTest.ConcatOpW (Failed)
+	 73 - SSOStringTest.ConcatOp (Failed)
+	 74 - SSOStringTest.OStream (Failed)
+	 75 - SSOStringTest.OStreamW (Failed)
+	 76 - SSOStringTest.IStream (Failed)
+	 77 - SSOStringTest.IStreamW (Failed)
+	 79 - SSOStringTest.ConcatSymbol (Failed)
+	 80 - SSOStringTest.Item (Failed)
+	 81 - SSOStringTest.SSOShortString (Failed)
+	 82 - SSOStringTest.SSOEmptyString (Failed)
+	 83 - SSOStringTest.SSOLongString (Failed)
+	 84 - SSOStringTest.SSOBoundaryString (Failed)
+	 85 - SSOStringTest.SSOBeyondBoundary (Failed)
+	 86 - SSOStringTest.SSOTransitionOnConcat (Failed)
+	 87 - SSOStringTest.SSOWideShortString (Failed)
+	 89 - SSOStringTest.SSOAfterMove (Failed)
+	 90 - SSOStringTest.SSOAfterCopy (Failed)
+	 91 - SSOStringTest.SSOCapacity (Failed)
