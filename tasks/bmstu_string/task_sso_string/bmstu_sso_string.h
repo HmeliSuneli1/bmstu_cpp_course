@@ -182,26 +182,21 @@ namespace bmstu
         }
 
             basic_string(basic_string&& dying) noexcept {
-                if (!dying.is_long())
-                {
-                    is_long_ = false;
-                    data_.short_str.size = dying.data_.short_str.size;
-            for (size_t i = 0; i < data_.short_str.size; i++)
-			{
-                        data_.short_str.buffer[i] = dying.data_.short_str.buffer[i];
-			}
-			data_.short_str.buffer[data_.short_str.size] = '\0';
-                }
-                else
-                {
-                    is_long_ = true;
+                is_long_ = dying.is_long_;
+
+                if (is_long()) {
                     data_.long_str.ptr = dying.data_.long_str.ptr;
                     data_.long_str.size = dying.data_.long_str.size;
                     data_.long_str.capacity = dying.data_.long_str.capacity;
-                    dying.data_.long_str.ptr = new T[1]{'\0'};
-                    dying.data_.long_str.size = 0;
-                    dying.data_.long_str.capacity = 0;
+                } else {
+                    data_.short_str.size = dying.data_.short_str.size;
+                    for (size_t i = 0; i <= data_.short_str.size; i++) {
+                        data_.short_str.buffer[i] = dying.data_.short_str.buffer[i];
+                    }
                 }
+                dying.is_long_ = false;
+                dying.data_.short_str.size = 0;
+                dying.data_.short_str.buffer[0] = '\0';
             }
 
             ~basic_string()
@@ -234,21 +229,33 @@ namespace bmstu
 
             basic_string& operator=(basic_string&& other) noexcept
             {
+                if (this == &other) return *this;
+
                 clean_();
-                if (other.is_long())
+
+                is_long_ = other.is_long_;
+
+                if (is_long_)
                 {
                     data_.long_str.capacity = other.data_.long_str.capacity;
-			        data_.long_str.size = other.data_.long_str.capacity;
-			        data_.long_str.ptr = new T[data_.long_str.capacity];
+			        data_.long_str.size = other.data_.long_str.size;
+			        data_.long_str.ptr = new T[data_.long_str.capacity + 1];
+                    
+                    for (size_t i = 0; i <= data_.long_str.size; i++) {
+                        data_.long_str.ptr[i] = other.data_.long_str.ptr[i];
+                    }
                 }
                 else
                 {
 			        data_.short_str.size = other.data_.short_str.size;
+                    for (size_t i = 0; i <= size(); i++) {
+                        data_.short_str.buffer[i] = other.data_.short_str.buffer[i];
+                    }
 		        }
 
-		        for (size_t i = 0; i<=size(); i++){
-			        get_ptr()[i] = other.get_ptr()[i];
-		        }
+                other.is_long_ = false;
+                other.data_.short_str.size = 0;
+                other.data_.short_str.buffer[0] = '\0';
 		
                 return *this;
             }
@@ -285,10 +292,12 @@ namespace bmstu
             basic_string& operator=(const basic_string& other)
             {
                 clean_();
+                is_long_ = other.is_long_;
                 if (is_long_) {
                     data_.long_str.capacity = other.data_.long_str.capacity;
-			        data_.long_str.size = other.data_.long_str.capacity;
-			        data_.long_str.ptr = new T[data_.long_str.capacity];
+			        data_.long_str.size = other.data_.long_str.size;
+			        data_.long_str.ptr = new T[data_.long_str.capacity + 1];
+
                 }
                 else {
 			        data_.short_str.size = other.data_.short_str.size;
@@ -297,8 +306,7 @@ namespace bmstu
 		        for (size_t i = 0; i<=size(); i++){
 			        get_ptr()[i] = other.get_ptr()[i];
 		        }
-		
-                return *this;
+                return *this; 
             }
 
             friend basic_string<T> operator+(const basic_string<T>& left,
@@ -360,43 +368,49 @@ namespace bmstu
 
                 basic_string& operator+=(const basic_string& other)
                 {
-                    T* new_ptr = new T[size() + other.size() + 1];
+                    size_t current_size = size();
+                    size_t other_size = other.size();
+                    size_t new_size = current_size + other_size;
+                    T* new_ptr = new T[new_size + 1];
                     for (size_t i = 0; i < size(); i++)
                     {
                         new_ptr[i] = get_ptr()[i];
                     }
-                    for (size_t i = 0; i < other.size(); i++)
+                    for (size_t i = 0; i < other_size; i++)
                     {
                         new_ptr[i + size()] = other.get_ptr()[i];
                     }
-                    new_ptr[size() + other.size()] = '\0';
-                    delete[] get_ptr();
+                    new_ptr[new_size] = '\0';
                     if (is_long_)
                     {
+                        delete[] data_.long_str.ptr;
                         data_.long_str.ptr = new_ptr;
-                        data_.long_str.size += other.size();
+                        data_.long_str.size = new_size;
+                        data_.long_str.capacity = new_size;
                     }
                     else
                     {
                         is_long_ = true;
                         data_.long_str.ptr = new_ptr;
-                        data_.long_str.size = size() + other.size();
-                        data_.long_str.capacity = size() + other.size();
+                        data_.long_str.size = new_size;
+                        data_.long_str.capacity = new_size;
                     }
                     return *this;
                 }
 
                 basic_string& operator+=(T symbol)
                 {
-                    T* new_ptr = new T[size() + 2];
-                    for (size_t i = 0; i < size(); i++)
+                    size_t current_size = size();
+                    T* new_ptr = new T[current_size + 2];
+                    for (size_t i = 0; i < current_size; i++)
                     {
                         new_ptr[i] = get_ptr()[i];
                     }
-                    new_ptr[size()] = symbol;
-                    new_ptr[size() + 1] = '\0';
+                    new_ptr[current_size] = symbol;
+                    new_ptr[current_size + 1] = '\0';
                     if (is_long_)
                     {
+                        delete[] data_.long_str.ptr;
                         data_.long_str.ptr = new_ptr;
                         data_.long_str.size += 1;
                     }
@@ -413,7 +427,7 @@ namespace bmstu
                         {
                             is_long_ = true;
                             data_.long_str.ptr = new_ptr;
-                            data_.long_str.size = size() + 1;
+                            data_.long_str.size = current_size + 1;
                             data_.long_str.capacity = size() + 1;
                         }
                     }
@@ -459,6 +473,7 @@ namespace bmstu
                     if (is_long())
                     {
                         delete[] data_.long_str.ptr;
+                        is_long_ = false;
                     }
                 }
             };
