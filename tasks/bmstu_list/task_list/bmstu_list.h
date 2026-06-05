@@ -1,6 +1,9 @@
 #include <cstddef>
 #include <iterator>
 #include <ostream>
+#include <compare>
+#include <initializer_list>
+#include <utility>
 #include "abstract_iterator.h"
 
 namespace bmstu
@@ -13,7 +16,7 @@ class list
 		node() = default;
 
 		node(node* prev, const T& value, node* next)
-			: next_node_(nullptr), prev_node_(nullptr)
+			: value_(value), next_node_(next), prev_node_(prev)
 		{
 		}
 
@@ -26,44 +29,68 @@ class list
 	struct iterator
 		: public abstract_iterator<iterator, T, std::bidirectional_iterator_tag>
 	{
+		using base_type = abstract_iterator<iterator, T, std::bidirectional_iterator_tag>;
+		using difference_type = typename base_type::difference_type;
+		using reference = typename base_type::reference;
+		using pointer = typename base_type::pointer;
 		node* current;
 		iterator() : current(nullptr) {}
 		iterator(node* node) : current(node) {}
-		iterator& operator++() override { return *this; }
-		iterator& operator--() override { return *this; }
-		iterator operator++(int) override { return nullptr; }
-		iterator operator--(int) override { return nullptr; }
-		iterator& operator+=(
-			const typename abstract_iterator<
-				iterator,
-				T,
-				std::bidirectional_iterator_tag>::difference_type& n) override
+		iterator& operator++() override { 
+			if (current) current = current->next_node_;
+			return *this; }
+		iterator& operator--() override { 
+			if (current) current = current->prev_node_;
+			return *this; }
+		iterator operator++(int) override {
+			iterator tmp =  *this;
+			++(*this);
+			return tmp;
+		}
+		iterator operator--(int) override { 
+			iterator tmp = *this;
+			--(*this);
+			return tmp; 
+		}
+		iterator& operator+=( const typename abstract_iterator<iterator,T,std::bidirectional_iterator_tag>::difference_type& n)
 		{
+			difference_type steps = n;
+			if (steps > 0) {
+				while (steps-- > 0 && current) {
+					current = current->next_node_;
+				}
+			} else {
+				while (steps++ < 0 && current) {
+					current = current->prev_node_;
+				}
+			}
 			return *this;
 		}
 		iterator& operator-=(
 			const typename abstract_iterator<
 				iterator,
 				T,
-				std::bidirectional_iterator_tag>::difference_type& n) override
+				std::bidirectional_iterator_tag>::difference_type& n)
 		{
-			return *this;
+			return *this += (-n);
 		}
 		iterator operator+(const typename abstract_iterator<
 						   iterator,
 						   T,
 						   std::bidirectional_iterator_tag>::difference_type& n)
-			const override
+			const
 		{
-			return nullptr;
+			iterator tmp = *this;
+			return tmp += n;
 		}
 		iterator operator-(const typename abstract_iterator<
 						   iterator,
 						   T,
 						   std::bidirectional_iterator_tag>::difference_type& n)
-			const override
+			const
 		{
-			return nullptr;
+			iterator tmp = *this;
+			return tmp -= n;
 		}
 		typename abstract_iterator<iterator,
 								   T,
@@ -87,6 +114,7 @@ class list
 		{
 			return current != other.current;
 		}
+
 		explicit operator bool() const override { return current != nullptr; }
 		typename abstract_iterator<
 			iterator,
@@ -94,23 +122,71 @@ class list
 			std::bidirectional_iterator_tag>::difference_type
 		operator-(const iterator& other) const override
 		{
-			return 0;
+			difference_type dist = 0;
+			node* curr = other.current;
+			while (curr != current && curr != nullptr) {
+				++dist;
+				curr = curr->next_node_;
+			}
+			if (curr == current) {
+				return dist;
+			}
+			dist = 0;
+			curr = current;
+			while (curr != other.current && curr != nullptr) {
+				--dist;
+				curr = curr->next_node_;
+		}
+		return dist;
 		}
 	};
 	using const_iterator = iterator;
 
-	list() {}
-
+	list() {
+		head_ = new node();
+	    tail_ = new node();
+	    head_->next_node_ = tail_;
+	    tail_->prev_node_ = head_;
+	    size_ = 0;
+	}
 	template <typename it>
-	list(it begin, it end)
+	list(it begin, it end) : list()
 	{
+		for (auto current = begin; current != end; ++current) {
+			push_back(*current);
+		}
 	}
 
-	list(std::initializer_list<T> values) {}
+	list(std::initializer_list<T> values) : list() {
 
-	list(const list& other) {}
+		for (const auto& value : values) {
+			push_back(value);
+		}
+	}
 
-	list(list&& other) {}
+	list(const list& other) : list() {
+		for (const auto& value : other) {
+			push_back(value);
+		}
+	}
+
+	list(list&& other) : list() {
+		swap(other);
+	}
+
+    list& operator=(const list& other)
+	{
+	    if (this != &other)
+	    {
+	        list tmp(other);
+	        swap(tmp);
+	    }
+	    return *this;
+	}
+    list& operator=(list&& other) noexcept {
+	    swap(other);
+	    return *this;
+	}
 
 #pragma endregion
 #pragma region pushs
@@ -145,19 +221,38 @@ class list
 		return (size_ == 0u);
 	}
 
-	~list() {}
+	~list()
+{
+    clear();
+    delete head_;
+    delete tail_;
+}
 
-	void clear() {}
+	void clear()
+{
+    node* curr = head_->next_node_;
+    while (curr != tail_)
+    {
+        node* next = curr->next_node_;
+        delete curr;
+        curr = next;
+    }
+    head_->next_node_ = tail_;
+    tail_->prev_node_ = head_;
+    size_ = 0;
+}
 
-	size_t size() const { return 0; }
+	size_t size() const { return size_; }
 
 	void swap(list& other)
-
 		noexcept
 	{
+    std::swap(head_, other.head_);
+    std::swap(tail_, other.tail_);
+    std::swap(size_, other.size_);
 	}
 
-	friend void swap(list& l, list& r) { l.swap(r); }
+	friend void swap(list& l, list& r) noexcept { l.swap(r); }
 
 #pragma region iterators
 
@@ -202,33 +297,107 @@ class list
 	{
 		return const_iterator{tail_};
 	}
+	const_iterator find(const T& v ) const {
+		auto it = begin();
+		while (it != end()) {
+			if (*it == v) {
+				return it;
+			}
+			it++;
+		}
+		return end();
+	}
 
 #pragma endregion
 
-	T operator[](size_t pos) const {}
+	T operator[](size_t pos) const
+	{
+	    node* curr = head_->next_node_;
+	    for (size_t i = 0; i < pos; i++)
+	    {
+	        curr = curr->next_node_;
+	    }
+	    return curr->value_;
+	}
 
-	T& operator[](size_t pos) { return *(static_cast<T*>((void*)&pos)); }
+	T& operator[](size_t pos)
+	{
+	    node* curr = head_->next_node_;
+	    for (size_t i = 0; i < pos; i++)
+	        curr = curr->next_node_;
+	    return curr->value_;
+	}
 
-	friend bool operator==(const list& l, const list& r) { return true; }
+	friend bool operator==(const list& l, const list& r)
+{
+    if (l.size() != r.size()) return false;
+    auto it1 = l.begin();
+    auto it2 = r.begin();
+    while (it1 != l.end())
+    {
+        if (*it1 != *it2) return false;
+        ++it1;
+        ++it2;
+    }
+    return true;
+	}
 
-	friend bool operator!=(const list& l, const list& r) { return false; }
+	friend bool operator!=(const list& l, const list& r) { return !(l == r); }
 
-	friend auto operator<=>(const list& lhs, const list& rhs) { return true; }
-
+    friend auto operator<=>(const list& lhs, const list& rhs)
+	{
+	    auto it1 = lhs.begin();
+	    auto it2 = rhs.begin();
+	    while (it1 != lhs.end() && it2 != rhs.end())
+	    {
+	        if (auto cmp = *it1 <=> *it2; cmp != 0) {
+	            return cmp;
+	        }
+	        ++it1;
+	        ++it2;
+	    }
+	    return lhs.size() <=> rhs.size();
+	}
 	friend std::ostream& operator<<(std::ostream& os, const list& other)
 	{
+	    os << "{";
+	    auto it = other.begin();
+	    if (it != other.end())
+	    {
+	        os << *it;
+	        ++it;
+	    }
+	    for (; it != other.end(); ++it)
+	    {
+	        os << ", " << *it;
+	    }
+	    os << "}";
 		return os;
 	}
 
 	iterator insert(const_iterator pos, const T& value)
 	{
-		return iterator{nullptr};
+	    node* current_node = pos.current;
+	    node* new_node = new node(current_node->prev_node_, value, current_node);
+	    current_node->prev_node_->next_node_ = new_node;
+	    current_node->prev_node_ = new_node;
+	    ++size_;
+		return iterator{new_node};
 	}
 
    private:
 	static bool lexicographical_compare_(const list<T>& l, const list<T>& r)
 	{
-		return "123";
+		auto it1 = l.begin();
+	    auto it2 = r.begin();
+	    while (it1 != l.end() && it2 != r.end())
+	    {
+	        if (*it1 < *it2) return true;
+	        if (*it1 > *it2) return false;
+	        ++it1;
+	        ++it2;
+	    }
+	    return (it1 == l.end()) && (it2 != r.end());
 	}
 
 	size_t size_ = 0;

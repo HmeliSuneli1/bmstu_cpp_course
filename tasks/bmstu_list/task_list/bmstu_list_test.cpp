@@ -536,3 +536,10 @@ TEST(BidirectLinkedListTests, from_vector)
 										"string7"s, "end_string"s}),
 			  my_vec);
 }
+
+TEST(BidirectLinkedListTests, from_vector2)
+{
+	bmstu::list<int> listStrings = {1,2,3,4,5,6,7,8,9};
+	ASSERT_EQ(listStrings.find(666), listStrings.end());
+	ASSERT_EQ(listStrings.find(1), listStrings.begin());
+}
